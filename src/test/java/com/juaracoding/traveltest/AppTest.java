@@ -49,7 +49,7 @@ public class AppTest {
 
         driver.findElement(By.name("submit")).click();
 
-        // --- 4. Verifikasi URL untuk memastikan registrasi berhasil ---
+        // Verifikasi URL untuk memastikan registrasi berhasil
         String actualUrl = driver.getCurrentUrl();
         String expectedUrl = "https://demo.guru99.com/test/newtours/register_sucess.php";
         Assert.assertEquals(actualUrl, expectedUrl, "Registrasi gagal, tidak diarahkan ke halaman sukses.");
@@ -60,7 +60,7 @@ public class AppTest {
         WebElement actual3 = driver.findElement(By.xpath("//b[contains(text(),'Note: Your user name is ')]"));
         String actualNoteMesssage = actual3.getText();
 
-        // --- 5. Bangun pesan yang diharapkan (expected) ---
+        // Bangun pesan yang diharapkan (expected) 
         String expectedDearMessage = "Dear " + firstName + " " + lastName + ",";
         String expectedNoteMessage = "Note: Your user name is " + fullName + ".";
 
